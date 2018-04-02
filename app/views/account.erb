@@ -7,7 +7,7 @@
   </head>
   <body id="page-top">
     <% if @user.is_logged_in? %>
-    <%= "#{@user.username}: #{@user.account}" %>
+    <%= "#{@user.username}: #{@user.balance}" %>
     <% else %>
     <a href="/">Home Page</a>
     <% end %>
