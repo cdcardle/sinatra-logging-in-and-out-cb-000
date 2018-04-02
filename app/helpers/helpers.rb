@@ -1,4 +1,4 @@
-class Helpers
+class Helpers < ActiveRecord::Base
   def current_user(session_hash)
     User.find(session_hash[:user_id])
   end
