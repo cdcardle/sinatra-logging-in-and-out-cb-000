@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <% if User.is_logged_in? %>
-    <%= "#{User.current_user.username}: #{current_user.balance}" %>
+    <% if Helpers.is_logged_in? %>
+    <h1>Welcome, <%= Helpers.current_user(session).username %></h1>
     <% else %>
     <a href="/">Home Page</a>
     <% end %>
