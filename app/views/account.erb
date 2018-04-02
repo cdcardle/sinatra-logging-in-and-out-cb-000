@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
+    <% if @user.is_logged_in? %>
+    <%= "#{@user.username}: #{@user.account}" %>
+    <a href="/">Home Page</a>
+    <% end %>
     <a href="/logout">Log Out</a>
-
   </body>
 </html>
